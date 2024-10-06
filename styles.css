@@ -1,0 +1,88 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+}
+
+/* Game Status (Message and Button) */
+.game-status {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #444;
+}
+
+.message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fffbe7;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#restartButton {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: #5a9bd3;
+}
+
+/* Game Board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: #f4f4f9;
+    border: 3px solid #555;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.05);
+}
+
+.cell.x {
+    color: #ff6347; /* Red for X */
+}
+
+.cell.o {
+    color: #4682b4; /* Blue for O */
+}
+
+/* Highlight the cells when there's a win */
+.cell.win {
+    background-color: #90ee90; /* Light Green */
+    font-weight: bold;
+}
